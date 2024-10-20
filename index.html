@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Rock-Paper-Scissor</title>
+    </head>
+    <body>
+        <div class="ropasc">
+            <div class="h">
+                <h1>----------SCORES----------</h1>
+            </div>
+                <div class="score-keep">
+                    <h1>Player :</h1>
+                    <h1>Computer :</h1>
+                    <h1>Draw :</h1>
+                </div>
+            <div class="score">
+                <input id="PS" placeholder="0" readonly>
+                <input id="CS" placeholder="0" readonly>
+                <input id="D" placeholder="0" readonly>
+            </div>
+            <div class="h">
+                <h1>----------GAMEPLAY----------</h1>
+            </div>
+            <div class="choice">
+                <input class="L" type="text" placeholder="Your choice" readonly>
+                <input type="text" placeholder="" id="inputBoxU" readonly>    
+            </div>
+            <div class="choice">
+                <input class="L" type="text" placeholder="My choice" readonly>
+                <input type="text" placeholder="" id="inputBoxC" readonly>
+            </div>
+            <div class="choice">
+                <input class="L" type="text" placeholder="Result" readonly>
+                <input type="text" placeholder="" id="Result" readonly> 
+            </div>
+
+            <div class="bc">
+                <button class="op1">Rock</button>
+                <button class="op2">Paper</button>
+                <button class="op3">Scissors</button>
+            </div>                 
+            <div class="new">
+                <button class="eq">New Game</button>
+            </div>                 
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
