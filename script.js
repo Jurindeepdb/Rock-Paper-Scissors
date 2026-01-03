@@ -52,18 +52,51 @@ a.forEach(button => {
         if(UC == CC){
             Result.value = "It's a draw";
             D.value++;
+
+            inputC.classList.remove('win', 'lose', 'draw');
+            inputU.classList.remove('win', 'lose', 'draw');
+
+            inputU.classList.add('draw');
+            inputC.classList.add('draw');
+
+            setTimeout(() => {
+                inputU.classList.remove('draw');
+                inputC.classList.remove('draw');
+            }, 10000);
         }
         else if((UC == 1 && CC == 2) ||
                 (UC == 2 && CC == 3) ||
                 (UC == 3 && CC == 1)){
             Result.value = "You lose";
             CS.value++;
+            
+            inputC.classList.remove('win', 'lose', 'draw');
+            inputU.classList.remove('win', 'lose', 'draw');
+
+            inputC.classList.add('win');
+            inputU.classList.add('lose');
+
+            setTimeout(() => {
+                inputC.classList.remove('win');
+                inputU.classList.remove('lose');
+            }, 10000);
         }
         else if((CC == 1 && UC == 2) ||
                 (CC == 2 && UC == 3) ||
                 (CC == 3 && UC == 1)){
             Result.value = "You win";
             PS.value++;
+
+            inputC.classList.remove('win', 'lose', 'draw');
+            inputU.classList.remove('win', 'lose', 'draw');
+
+            inputU.classList.add('win');
+            inputC.classList.add('lose');
+
+            setTimeout(() => {
+                inputU.classList.remove('win');
+                inputC.classList.remove('lose');
+            }, 10000);
         }
         else if(UC == 4){
             inputU.value = "";
@@ -72,6 +105,8 @@ a.forEach(button => {
             PS.value = "";
             CS.value = "";
             D.value = "";
+            inputC.classList.remove('win', 'lose', 'draw');
+            inputU.classList.remove('win', 'lose', 'draw');
         }
     })
 })
